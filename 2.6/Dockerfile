@@ -4,6 +4,7 @@ FROM debian:wheezy
 RUN groupadd -r mongodb && useradd -r -g mongodb mongodb
 
 RUN apt-get update \
+	&& apt-get upgrade \
 	&& apt-get install -y curl \
 	&& rm -rf /var/lib/apt/lists/*
 
